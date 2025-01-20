@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Validation de formulaire</title>
+    <script>
+        function validation() {
+            const Input = document.getElementById('monChamp');
+            if (Input.value === '') {
+                alert('Le champ est vide Veuillez remplir ');
+                return false; 
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h1>Formulaire</h1>
+    <form onsubmit="return validation()">
+        <label for="monChamp">Champ requis :</label>
+        <input type="text" id="monChamp" name="monChamp">
+        <input type="submit" value="Soumettre">
+    </form>
+    <p id="messageErreur"></p>
+</body>
+</html>
